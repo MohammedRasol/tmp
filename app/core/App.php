@@ -14,6 +14,8 @@ class App
                 $this->controller = $url[0];
                 unset($url[0]);
             }
+            else 
+            header("location:../public/CONTROLLER_NOT_FOUND.php");
 
         require_once("../app/Controllers/" . $this->controller . ".php");
         $this->controller = new $this->controller;
@@ -23,7 +25,10 @@ class App
                 $this->method = $url[1];
                 unset($url[1]);
             }
+            else 
+            header("location:../../public/METHOD_NOT_FOUND.php");
         }
+       
 
         $this->params = $url ? array_values($url) : [];
 

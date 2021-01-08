@@ -15,13 +15,17 @@ class Database
 
     public function ConnectToDataBase()
     {
-        $this->connect =  mysqli_connect($this->host, $this->username,$this->password,$this->dbname);
+        $this->connect =  new mysqli($this->host, $this->username,$this->password,$this->dbname);
         return $this->connect;
     }
+
+    
     public function DisconnectDataBase()
     {
         $this->connect->close();
     }
+
+
 }
 
 // define('DB_SERVER', 'localhost');

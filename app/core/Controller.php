@@ -14,6 +14,6 @@ class Controller
     }
 
     public function view ($view,$NAVIGATE=[]){
-        require_once("../app/Views/"   . $view. ".php" );
+        require_once("../app/Views/". $view. ".php" );
     }
 }

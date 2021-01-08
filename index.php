@@ -1,0 +1,2 @@
+<?php 
+HEADER("LOCATION:public/");
